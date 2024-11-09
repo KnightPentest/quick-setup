@@ -7,7 +7,13 @@ tags:
   - knight
 ---
 **test**
+
 `print('hello world')`
 
 cmd
+
 `whoami /all`
+
+https://google.com
+
+[test bro](https://t.me/mirea)
