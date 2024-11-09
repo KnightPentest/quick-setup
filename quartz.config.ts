@@ -15,7 +15,7 @@ const config: QuartzConfig = {
     analytics: {
       provider: "plausible",
     },
-    locale: "en-US",
+    locale: "ru-RU",
     baseUrl: "ad.knightpentest.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
