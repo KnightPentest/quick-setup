@@ -1,10 +1,14 @@
 ---
-title: KnightPentest
+title: "Главная страница"
 ---
 
-Добро пожаловоть в логово баламута!
+# Добро пожаловать!
 
-- [Курс Active Directory для чайников (читать бесплатно на русском языке)](https://knightpentest.com/ad/)
+Вот список всех ваших заметок:
 
-- [Наш блог во всемирной путине=)](https://knightpentest.com/blog/)
-
+{% for page in allFiles %}
+- [{{ page.title | default: "Без названия" }}]({{ page.url }})
+  - **Дата:** {{ page.created | date: "YYYY-MM-DD" }}
+  - **Описание:** {{ page.description | default: "Описание отсутствует" }}
+  - **Теги:** {{ page.tags | join: ", " }}
+{% endfor %}
