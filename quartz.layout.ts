@@ -5,7 +5,9 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.Darkmode(), // Перемещено сюда
+  ],
   footer: Component.Footer({
     links: {
       Chat: "https://t.me/greyhatchat",
@@ -24,14 +26,13 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()), // Spacer only for mobile
+    Component.MobileOnly(Component.Spacer()),
     Component.Search(),
-    Component.Darkmode(),
-    Component.Explorer(), // Removed DesktopOnly so it shows on all devices
+    Component.Explorer(),
   ],
   right: [
     Component.Graph(),
-    Component.TableOfContents(), // Removed DesktopOnly so TOC shows on all devices
+    Component.TableOfContents(),
     Component.Backlinks(),
   ],
 }
@@ -45,10 +46,9 @@ export const defaultListPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()), // Spacer only for mobile
+    Component.MobileOnly(Component.Spacer()),
     Component.Search(),
-    Component.Darkmode(),
-    Component.Explorer(), // Removed DesktopOnly so it shows on all devices
+    Component.Explorer(),
   ],
   right: [],
 }
