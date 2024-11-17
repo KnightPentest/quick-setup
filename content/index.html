@@ -3,41 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница</title>
+    <title>Главная страница блога</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
+            flex-direction: column;
+            color: #333;
+            text-align: center;
         }
         .container {
-            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: white;
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 18px;
+            color: #e0e0e0;
+            margin-bottom: 30px;
         }
         .btn {
             display: inline-block;
-            padding: 20px 40px;
-            margin: 20px;
-            font-size: 24px;
+            padding: 15px 30px;
+            margin: 15px;
+            font-size: 18px;
             text-decoration: none;
             color: white;
-            background-color: #007BFF;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
+            background-color: #007bff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
         .btn:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .btn:active {
+            background-color: #00408b;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+            .btn {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <a href="https://knightpentest.com/ad/" class="btn" target="_blank">Читать ад</a>
-    <a href="https://knightpentest.com/blog" class="btn" target="_blank">Читать блог</a>
+    <h1>Добро пожаловать в мир информационной безопасности!</h1>
+    <p>Здесь вы найдете полезные материалы и ресурсы для повышения вашей безопасности в интернете.</p>
+
+    <a href="https://knightpentest.com/ad/" class="btn" target="_blank">Читать райтапы по пентесту сетей</a>
+    <a href="https://knightpentest.com/blog" class="btn" target="_blank">Читать блог по всемирной паутине</a>
+    <a href="https://t.me/mirea" class="btn" target="_blank">Перейти в телеграм канал</a>
+    <a href="https://t.me/greyhatchat" class="btn" target="_blank">Перейти в чат</a>
 </div>
 
 </body>
