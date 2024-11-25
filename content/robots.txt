@@ -1,0 +1,6 @@
+User-agent: Yandex
+Disallow: /
+
+Allow: /$
+Allow: /ad/
+Allow: /blog/
