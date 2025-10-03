@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лучшие форумы и ресурсы по информационной безопасности: bughunting, пентестинг, CTF, red teaming, уязвимости, эксплойты, обучение и карьера в кибербезопасности.">
+    <meta name="keywords" content="информационная безопасность, пентест, CTF, red team, bughunting, уязвимости, эксплойты, active directory, kerberos, mimikatz, bloodhound, smb, ldap, webdav, codeby, xss.pro, forum.duty-free.cc, hackthebox, tryhackme">
+    <title>Форумы по информационной безопасности | Пентестинг, CTF, Red Teaming</title>
+    <!-- Обновлённый favicon: шестерёнка с замком -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238b5cf6'><path d='M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z'/></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gray-900': '#111827',
+                        'gray-800': '#1f2937',
+                        'gray-700': '#374151',
+                        'gray-600': '#4b5563',
+                        'gray-500': '#6b7280',
+                        'gray-400': '#9ca3af',
+                        'gray-300': '#d1d5db',
+                        'purple-900': '#581c87',
+                        'purple-600': '#9333ea',
+                        'purple-500': '#a855f7',
+                        'purple-400': '#c084fc',
+                        'pink-900': '#831843',
+                        'pink-600': '#db2777',
+                        'pink-500': '#ec4899',
+                        'pink-400': '#f472b6',
+                        'blue-900': '#1e3a8a',
+                        'blue-600': '#2563eb',
+                        'blue-500': '#3b82f6',
+                        'cyan-600': '#0891b2',
+                        'cyan-500': '#06b6d4',
+                        'yellow-400': '#facc15',
+                        'orange-500': '#f97316',
+                        'green-400': '#4ade80',
+                        'red-500': '#ef4444',
+                        'amber-500': '#f59e0b',
+                        'georgia-red': '#da0000',
+                        'georgia-white': '#ffffff'
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                        sm: '4px',
+                        md: '8px',
+                        lg: '12px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #111827 0%, #1f2937 50%, #000000 100%);
+            overflow-x: hidden;
+            color: #f3f4f6;
+        }
+        .star-filled {
+            color: #facc15;
+            text-shadow: 0 0 4px rgba(250, 204, 21, 0.5);
+        }
+        .star-empty {
+            color: #6b7280;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.4);
+        }
+        .quote-text {
+            font-style: italic;
+            line-height: 1.6;
+            text-align: center;
+            font-size: 1rem;
+            color: #e5e7eb;
+        }
+        .admin-quote {
+            background: linear-gradient(135deg, #2d1b69 0%, #1a1a2e 100%);
+            border-left: 4px solid #8b5cf6;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(8px);
+            background-color: rgba(45, 27, 105, 0.2);
+            border-radius: 12px;
+        }
+        .admin-quote::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+            animation: scan 3s linear infinite;
+        }
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+        .flag-circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+            margin: 0 1px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .flag-usa {
+            background: linear-gradient(to bottom, 
+                #B22234 0%,    /* Red */
+                #B22234 33%,   /* Red */
+                #FFFFFF 33%,   /* White */
+                #FFFFFF 66%,   /* White */
+                #3C3B6E 66%,   /* Blue */
+                #3C3B6E 100%   /* Blue */
+            );
+            color: transparent;
+        }
+        .flag-russia {
+            background: linear-gradient(to bottom, 
+                #FFFFFF 0%,    /* White */
+                #FFFFFF 33%,   /* White */
+                #0039A6 33%,   /* Blue */
+                #0039A6 66%,   /* Blue */
+                #D52B1E 66%,   /* Red */
+                #D52B1E 100%   /* Red */
+            );
+            color: transparent;
+        }
+        .flag-eu {
+            background: linear-gradient(135deg, #003399 0%, #003399 100%);
+            position: relative;
+            color: transparent;
+        }
+        .flag-eu::before {
+            content: '🇪🇺';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 8px;
+            color: #FFCC00;
+        }
+        .flag-georgia {
+            background: #da0000;
+            position: relative;
+            color: transparent;
+        }
+        .flag-georgia::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 12px;
+            height: 1px;
+            background: white;
+            transform: translate(-50%, -50%);
+        }
+        .flag-georgia::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1px;
+            height: 12px;
+            background: white;
+            transform: translate(-50%, -50%);
+        }
+        .glass-card {
+            background: rgba(31, 41, 55, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        .neon-heading {
+            text-shadow: 0 0 3px currentColor, 0 0 6px currentColor, 0 0 9px currentColor;
+        }
+        .neon-purple {
+            text-shadow: 0 0 3px #8b5cf6, 0 0 6px #8b5cf6, 0 0 9px #8b5cf6;
+        }
+        .neon-pink {
+            text-shadow: 0 0 3px #ec4899, 0 0 6px #ec4899, 0 0 9px #ec4899;
+        }
+        .neon-cyan {
+            text-shadow: 0 0 3px #06b6d4, 0 0 6px #06b6d4, 0 0 9px #06b6d4;
+        }
+        .neon-green {
+            text-shadow: 0 0 3px #4ade80, 0 0 6px #4ade80, 0 0 9px #4ade80;
+        }
+        .neon-amber {
+            text-shadow: 0 0 3px #f59e0b, 0 0 6px #f59e0b, 0 0 9px #f59e0b;
+        }
+        .neon-blue {
+            text-shadow: 0 0 3px #3b82f6, 0 0 6px #3b82f6, 0 0 9px #3b82f6;
+        }
+        .neon-orange {
+            text-shadow: 0 0 3px #f97316, 0 0 6px #f97316, 0 0 9px #f97316;
+        }
+        .neon-red {
+            text-shadow: 0 0 3px #ef4444, 0 0 6px #ef4444, 0 0 9px #ef4444;
+        }
+        .soft-glow {
+            text-shadow: 0 0 3px rgba(139, 92, 246, 0.4);
+        }
+        .expert-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 12px;
+            margin-right: 4px;
+            text-shadow: none;
+        }
+        .rehub-icon {
+            background: linear-gradient(135deg, #ea580c, #c2410c);
+            color: white;
+            position: relative;
+        }
+        .rehub-icon::before {
+            content: "🧔";
+            font-size: 10px;
+            filter: invert(1);
+        }
+        .torzireael-icon {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            position: relative;
+        }
+        .torzireael-icon::before {
+            content: "🎩";
+            font-size: 10px;
+        }
+        @media (max-width: 768px) {
+            .text-5xl { font-size: 2.5rem; }
+            .text-7xl { font-size: 3rem; }
+            .p-8 { padding: 1.5rem; }
+            .grid-cols-2 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+            .flex-col { flex-direction: column !important; }
+            .gap-4 { gap: 0.5rem !important; }
+            .mb-16 { margin-bottom: 2rem !important; }
+            .flag-circle { width: 18px; height: 18px; }
+            .quote-text { font-size: 0.85rem; line-height: 1.5; }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-blue-900/20"></div>
+        <div class="relative container mx-auto px-4 py-12">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-gradient-to-r from-purple-500 to-pink-500 p-2 rounded-full">
+                        <i class="fas fa-lock text-white text-2xl soft-glow"></i>
+                    </div>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent neon-heading">
+                    Форумы по ИБ
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+                    Пентестинг, CTF, Red Teaming, уязвимости и карьера в кибербезопасности
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Hero Stats - Replaced with expert attribution -->
+        <div class="text-center mb-12 glass-card p-4 rounded-xl border border-gray-700/50">
+            <p class="text-gray-300 mb-2 text-sm">
+                Составлено экспертами сообщества:
+            </p>
+            <div class="flex items-center justify-center gap-2 text-xs">
+                <span class="expert-icon rehub-icon"></span>
+                <span class="text-orange-300 font-medium neon-orange">Rehub</span>
+                <span class="text-gray-500">•</span>
+                <span class="expert-icon torzireael-icon"></span>
+                <span class="text-blue-300 font-medium neon-blue">TorZireael</span>
+            </div>
+        </div>
+
+        <!-- Resources Grid -->
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <!-- Best Resource - forum.duty-free.cc -->
+            <div class="relative rounded-xl overflow-hidden border-2 border-purple-500 bg-gradient-to-br from-gray-800/80 to-gray-900/80 hover-scale glass-card">
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600">
+                            <i class="fas fa-shield-alt text-white text-xl soft-glow"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1 mb-1">
+                                <h3 class="text-xl font-bold text-white neon-purple">forum.duty-free.cc</h3>
+                                <div class="flex items-center">
+                                    <span class="flag-circle flag-eu"></span>
+                                    <span class="flag-circle flag-georgia"></span>
+                                    <span class="flag-circle flag-russia"></span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <div class="flex">
+                                    <i class="fas fa-star star-filled"></i>
+                                    <i class="fas fa-star star-filled"></i>
+                                    <i class="fas fa-star star-filled"></i>
+                                    <i class="fas fa-star star-filled"></i>
+                                    <i class="fas fa-star star-filled"></i>
+                                </div>
+                                <span class="text-gray-400 text-xs soft-glow">4.9</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-300 mb-4 text-sm">
+                        Элитный форум по информационной безопасности для профессионалов. Только для тех, кто собирается ходить в пиджаке и галстуке.
+                    </p>
+
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-bolt text-green-400 text-sm mt-0.5 flex-shrink-0 soft-glow"></i>
+                            <span class="text-gray-200 text-xs">Конкурсы статей с призовым фондом от $30,000</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-bolt text-green-400 text-sm mt-0.5 flex-shrink-0 soft-glow"></i>
+                            <span class="text-gray-200 text-xs">За авторские статьи фиксированно платят $200</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-chart-line text-red-400 text-sm mt-0.5 flex-shrink-0 soft-glow"></i>
+                            <span class="text-gray-200 text-xs">Годовой revenue: $5,000,000</span>
+                        </div>
+                    </div>
+
+                    <!-- Admin Quote -->
+                    <div class="admin-quote p-3 mb-4 rounded-lg">
+                        <div class="quote-text text-gray-200">
+                            "USA, Россия - это мой дом, я улетел за океан и пустил корни<br>
+                            Были проблемы с федералами, но - всё в прошлом<br>
+                            В приоритете лишь семья, всё остальное - пофиг<br>
+                            Я всю дорогу был игрок - суетил воздух<br>
+                            Теперь, всегда есть, чем дышать - и это было просто<br>
+                            Терпилы вынуждены ждать, когда им бросят мясо<br>
+                            А я умею побеждать и забирать всё сразу<br>
+                            Я из тех, кто крутит на пальцах весь земной шар<br>
+                            Знания - сила, за ними - опыт и успех<br>
+                            Я рисую картины мыслями в голове сам<br>
+                            Плавно, по ступеням, что хотел - то и создал<br>
+                            2022, Miami, bitch - всё так-же люблю США и курю табак<br>
+                            С 2010-ого была мечта, слышь - вернуться с миллионом баксов, и тут жить"
+                        </div>
+                        <div class="text-right mt-1 text-purple-300 text-xs">
+                            — Администратор forum.duty-free.cc
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-3 border-t border-gray-700">
+                        <div class="text-gray-400 text-xs">
+                            <i class="fas fa-globe mr-1 soft-glow"></i>
+                            Элитное сообщество
+                        </div>
+                        <a href="https://forum.duty-free.cc/register" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded text-xs font-semibold bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white transition-all duration-300">
+                            Подать заявку
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Resource - DutyNews -->
+            <div class="relative rounded-xl overflow-hidden border-2 border-blue-500 bg-gradient-to-br from-gray-800/60 to-blue-900/20 hover-scale glass-card">
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600">
+                            <i class="fab fa-telegram text-white text-xl soft-glow"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1 mb-1">
+                                <h3 class="text-xl font-bold text-white neon-blue">DutyNews</h3>
+                                <span class="flag-circle flag-russia"></span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <div class="flex">
+                                    <i class="fas fa-star star-filled"></i>
+                                    <i class="fas fa-star star-filled"></i>
+                                    <i class="fas fa-star star-filled"></i>
+                                    <i class="fas fa-star star-filled"></i>
+                                    <i class="fas fa-star star-empty"></i>
+                                </div>
+                                <span class="text-gray-400 text-xs soft-glow">4.7</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-300 mb-4 text-sm">
+                        Дружелюбное комьюнити кибербезопасников. Актуальные новости и обмен знаниями.
+                    </p>
+
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-bolt text-green-400 text-sm mt-0.5 flex-shrink-0 soft-glow"></i>
+                            <span class="text-gray-200 text-xs">Актуальные новости из мира кибербезопасности</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-users text-blue-400 text-sm mt-0.5 flex-shrink-0 soft-glow"></i>
+                            <span class="text-gray-200 text-xs">Дружелюбное и поддерживающее сообщество</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-3 border-t border-gray-700">
+                        <div class="text-gray-400 text-xs">
+                            <i class="fas fa-globe mr-1 soft-glow"></i>
+                            Telegram-канал
+                        </div>
+                        <a href="https://t.me/DutyFreeForum" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded text-xs font-semibold bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white transition-all duration-300">
+                            Присоединиться
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Resources Grid -->
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <!-- XSS.PRO -->
+            <div class="relative rounded-xl overflow-hidden border-2 border-green-500 bg-gradient-to-br from-gray-800/60 to-green-900/20 hover-scale glass-card">
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2 rounded-lg bg-gradient-to-r from-green-600 to-emerald-600">
+                            <i class="fas fa-code text-white text-xl soft-glow"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1 mb-1">
+                                <h3 class="text-xl font-bold text-white neon-green">xss.pro</h3>
+                                <span class="flag-circle flag-russia"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-300 mb-4 text-sm">
+                        Сообщество энтузиастов кибербезопасности и ред-тиминга. Отличное место для начинающих и опытных специалистов.
+                    </p>
+
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-bolt text-green-400 text-sm mt-0.5 flex-shrink-0 soft-glow"></i>
+                            <span class="text-gray-200 text-xs">Бесплатные обучающие материалы и лаборатории</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-bolt text-green-400 text-sm mt-0.5 flex-shrink-0 soft-glow"></i>
+                            <span class="text-gray-200 text-xs">Еженедельные CTF-турниры для всех уровней</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-3 border-t border-gray-700">
+                        <div class="text-gray-400 text-xs">
+                            <i class="fas fa-globe mr-1 soft-glow"></i>
+                            8,500+ участников
+                        </div>
+                        <a href="https://xss.pro" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded text-xs font-semibold bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white transition-all duration-300">
+                            Присоединиться
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Codeby.net -->
+            <div class="relative rounded-xl overflow-hidden border-2 border-amber-500 bg-gradient-to-br from-gray-800/60 to-amber-900/20 hover-scale glass-card">
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2 rounded-lg bg-gradient-to-r from-amber-500 to-orange-500">
+                            <i class="fas fa-users text-white text-xl soft-glow"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1 mb-1">
+                                <h3 class="text-xl font-bold text-white neon-amber">codeby.net</h3>
+                                <span class="flag-circle flag-russia"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-300 mb-4 text-sm">
+                        Форум для тех, кто хочет собрать CTF-команду и работать пентестером в офисе за стабильную зарплату.
+                    </p>
+
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-bolt text-amber-400 text-sm mt-0.5 flex-shrink-0 soft-glow"></i>
+                            <span class="text-gray-200 text-xs">Поиск и формирование CTF-команд</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-bolt text-amber-400 text-sm mt-0.5 flex-shrink-0 soft-glow"></i>
+                            <span class="text-gray-200 text-xs">Вакансии пентестеров от топовых компаний</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-trophy text-yellow-400 text-sm mt-0.5 flex-shrink-0 soft-glow"></i>
+                            <span class="text-gray-200 text-xs">Победители международных CTF-чемпионатов</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-3 border-t border-gray-700">
+                        <div class="text-gray-400 text-xs">
+                            <i class="fas fa-globe mr-1 soft-glow"></i>
+                            Российский форум
+                        </div>
+                        <a href="https://codeby.net" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded text-xs font-semibold bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white transition-all duration-300">
+                            Посетить форум
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Telegram & YouTube Channels -->
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <!-- Make XSS.PRO Great Again -->
+            <div class="relative rounded-xl overflow-hidden border-2 border-red-500 bg-gradient-to-br from-gray-800/60 to-red-900/20 hover-scale glass-card">
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2 rounded-lg bg-gradient-to-r from-red-600 to-pink-600">
+                            <i class="fab fa-telegram text-white text-xl soft-glow"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white neon-red">Make XSS.PRO Great Again</h3>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-300 mb-4 text-sm">
+                        Новости и обсуждения по проекту xss.pro. Неофициальный канал поддержки сообщества.
+                    </p>
+
+                    <div class="flex items-center justify-between pt-3 border-t border-gray-700">
+                        <div class="text-gray-400 text-xs">
+                            <i class="fas fa-globe mr-1 soft-glow"></i>
+                            Telegram-канал
+                        </div>
+                        <a href="https://t.me/DamagelabXSS" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded text-xs font-semibold bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white transition-all duration-300">
+                            Присоединиться
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- YouTube Channels -->
+            <div class="relative rounded-xl overflow-hidden border-2 border-cyan-500 bg-gradient-to-br from-gray-800/60 to-cyan-900/20 hover-scale glass-card">
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2 rounded-lg bg-gradient-to-r from-cyan-600 to-teal-600">
+                            <i class="fab fa-youtube text-white text-xl soft-glow"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white neon-cyan">Полезные YouTube каналы</h3>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 mb-4">
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-play text-cyan-400 text-sm mt-0.5 flex-shrink-0 soft-glow"></i>
+                            <a href="https://www.youtube.com/@unit3301" target="_blank" rel="noopener noreferrer" class="text-gray-200 text-xs hover:text-cyan-300">
+                                unit3301
+                            </a>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-play text-cyan-400 text-sm mt-0.5 flex-shrink-0 soft-glow"></i>
+                            <a href="https://www.youtube.com/@wardriving" target="_blank" rel="noopener noreferrer" class="text-gray-200 text-xs hover:text-cyan-300">
+                                Боевое Вождение
+                            </a>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-play text-cyan-400 text-sm mt-0.5 flex-shrink-0 soft-glow"></i>
+                            <a href="https://www.youtube.com/@TorZireael1" target="_blank" rel="noopener noreferrer" class="text-gray-200 text-xs hover:text-cyan-300">
+                                TorZireael
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-3 border-t border-gray-700">
+                        <div class="text-gray-400 text-xs">
+                            <i class="fas fa-video mr-1 soft-glow"></i>
+                            Обучающие материалы
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Обучающие платформы -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-center mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent neon-cyan">
+                Обучающие платформы
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- PortSwigger Web Security Academy -->
+                <div class="relative rounded-xl overflow-hidden border-2 border-pink-500 bg-gradient-to-br from-gray-800/60 to-pink-900/20 hover-scale glass-card">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 rounded-lg bg-gradient-to-r from-pink-500 to-purple-500">
+                                <i class="fas fa-graduation-cap text-white text-xl soft-glow"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white neon-pink">PortSwigger Web Security Academy</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4 text-sm">
+                            Бесплатная интерактивная платформа от создателей Burp Suite. Идеально подходит для изучения веб-безопасности, поиска уязвимостей и подготовки к работе баг-хаунтером или пентестером.
+                        </p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-700">
+                            <div class="text-gray-400 text-xs">
+                                <i class="fas fa-globe mr-1 soft-glow"></i>
+                                Глобальная платформа
+                            </div>
+                            <a href="https://portswigger.net/web-security" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded text-xs font-semibold bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white transition-all duration-300">
+                                Начать обучение
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Standoff365 HackBase -->
+                <div class="relative rounded-xl overflow-hidden border-2 border-blue-500 bg-gradient-to-br from-gray-800/60 to-blue-900/20 hover-scale glass-card">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500">
+                                <i class="fas fa-server text-white text-xl soft-glow"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white neon-blue">Standoff365 HackBase</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4 text-sm">
+                            Киберполигон от организаторов CTF-чемпионата Standoff. Бесплатная регистрация. Платформа предлагает практические задания на реальных уязвимостях для прокачки навыков пентестинга и анализа.
+                        </p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-700">
+                            <div class="text-gray-400 text-xs">
+                                <i class="fas fa-globe mr-1 soft-glow"></i>
+                                RU/EN, киберполигон
+                            </div>
+                            <a href="https://hackbase.standoff365.com/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded text-xs font-semibold bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white transition-all duration-300">
+                                Начать обучение
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SPbCTF -->
+                <div class="relative rounded-xl overflow-hidden border-2 border-green-500 bg-gradient-to-br from-gray-800/60 to-green-900/20 hover-scale glass-card">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 rounded-lg bg-gradient-to-r from-green-500 to-teal-500">
+                                <i class="fas fa-trophy text-white text-xl soft-glow"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white neon-green">SPbCTF</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4 text-sm">
+                            Платформа с открытыми CTF-задачами от сообщества Санкт-Петербургских CTF-энтузиастов. Включает не только веб-таски, но и реверс, криптографию, форензику, OSINT и другие направления.
+                        </p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-700">
+                            <div class="text-gray-400 text-xs">
+                                <i class="fas fa-globe mr-1 soft-glow"></i>
+                                Открытое CTF-сообщество
+                            </div>
+                            <a href="https://web-kids20.forkbomb.ru/tasks" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded text-xs font-semibold bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white transition-all duration-300">
+                                Начать обучение
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HackerLab -->
+                <div class="relative rounded-xl overflow-hidden border-2 border-purple-500 bg-gradient-to-br from-gray-800/60 to-purple-900/20 hover-scale glass-card">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 rounded-lg bg-gradient-to-r from-purple-500 to-violet-500">
+                                <i class="fas fa-flask text-white text-xl soft-glow"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white neon-purple">HackerLab</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4 text-sm">
+                            Платформа от команды Codeby для обучения и сертификации в области информационной безопасности. Более 400 практических заданий в формате CTF: веб, крипта, реверс, OSINT, PWN и другие.
+                        </p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-700">
+                            <div class="text-gray-400 text-xs">
+                                <i class="fas fa-globe mr-1 soft-glow"></i>
+                                Разработка Codeby
+                            </div>
+                            <a href="https://hackerlab.pro/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded text-xs font-semibold bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600 text-white transition-all duration-300">
+                                Начать обучение
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="mt-12 text-center glass-card p-6 rounded-xl border border-purple-500/30">
+            <i class="fas fa-code text-purple-400 text-2xl mb-3 soft-glow"></i>
+            <h2 class="text-2xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent neon-purple">
+                Готов стать частью сообщества?
+            </h2>
+            <p class="text-gray-300 text-sm mb-4">
+                Найди единомышленников, возможности для роста и реальные проекты в мире информационной безопасности.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-2 justify-center">
+                <a href="https://forum.duty-free.cc/register" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded text-sm font-bold hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
+                    Подать заявку в forum.duty-free.cc
+                </a>
+                <a href="https://t.me/DutyFreeForum" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 rounded text-sm font-bold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-center">
+                    Присоединиться к DutyNews
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 mt-12 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center mb-2">
+                <i class="fas fa-lock text-purple-400 text-xl soft-glow"></i>
+            </div>
+            <p class="text-gray-400 text-xs">
+                © 2025 Форумы по информационной безопасности. Все права защищены.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
