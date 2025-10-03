@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KnightPentest — сообщество по пентесту и red teaming. Изучайте Active Directory, участвуйте в CTF, читайте экспертные статьи и прокачивайте навыки информационной безопасности." />
+  <meta name="keywords" content="пентест, red team, информационная безопасность, knightpentest, active directory, CTF, XSS, OSINT, хакинг, обучение ИБ" />
+  <meta name="author" content="KnightPentest" />
+  <title>KnightPentest — диаспора пентестеров</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-dark: #0f0f1b;
+      --bg-card: #1a1a2e;
+      --text-primary: #e6e6ff;
+      --text-secondary: #a0a0c0;
+      --accent: #00f0ff;
+      --accent-hover: #00ccff;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      background: linear-gradient(90deg, var(--accent), #7e57c2);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      margin-bottom: 2.5rem;
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 0.75rem;
+      padding: 1rem 2rem;
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 1s ease-out 0.4s both;
+      box-shadow: var(--shadow);
+    }
+
+    .btn:hover {
+      background: rgba(0, 240, 255, 0.1);
+      color: white;
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0, 240, 255, 0.3);
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.4), transparent);
+      transition: 0.5s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1.5rem;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+
+      .btn {
+        display: block;
+        margin: 1rem auto;
+        width: 90%;
+        max-width: 320px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+      }
+    }
+
+    footer {
+      margin-top: 3rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Добро пожаловать в мир рыцарской безопасности!</h1>
+    <p>Изучайте пентест, безопасность сетей и современный интернет вместе с нами.</p>
+
+    <a href="https://knightpentest.com/ad/" class="btn" target="_blank" rel="noopener">Райтапы по пентесту</a>
+    <a href="https://knightpentest.com/blog" class="btn" target="_blank" rel="noopener">Читать блог</a>
+    <a href="https://knightpentest.com/blog/3" class="btn" target="_blank" rel="noopener">Наши достижения</a>
+    <a href="https://knightpentest.com/map/" class="btn" target="_blank" rel="noopener">Ресурсы для изучения ИБ</a>
+
+    <footer>
+      &copy; 2025 KnightPentest — сообщество профессионалов в области информационной безопасности.
+    </footer>
+  </div>
+</body>
+</html>
