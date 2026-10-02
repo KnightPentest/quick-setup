@@ -1,0 +1,35 @@
+Privacy Policy
+
+Last updated: October 2, 2026
+
+This Privacy Policy describes how KnightPentest ("we", "us") collects, uses and protects information in connection with the website knightpentest.com and our internal keyword research application ("the App").
+
+1. Information we access
+The App uses Google OAuth to access the Google Ads API on behalf of the account owner only. When you authorize the App, we access:
+- Your Google account email address (to identify the authorized account);
+- Google Ads Keyword Planner data: keyword ideas, average monthly search volumes, competition levels and bid estimates.
+We do not access campaign data, billing information, contacts or any other Google user data.
+
+2. How we use information
+Data obtained from Google APIs is used solely to research keywords and plan content for our own websites. We do not use it for advertising to users, profiling, or any purpose other than providing this functionality.
+
+3. Storage and security
+OAuth tokens are stored locally on the account owner's computer and are never transmitted to third parties. Keyword data is stored in local files for internal use only. We apply reasonable technical measures to protect this information.
+
+4. Sharing
+We do not sell, rent, transfer or share Google user data with any third parties.
+
+5. Google API Services User Data Policy
+KnightPentest's use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy (https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.
+
+6. Data retention and deletion
+You can revoke the App's access at any time at https://myaccount.google.com/permissions. On request, we delete any stored data associated with your account within 30 days.
+
+7. Website visitors
+Our website may use standard server logs and cookies to operate and analyze traffic. We do not sell visitor data.
+
+8. Contact
+For questions about this policy or data deletion requests, contact: t.me/mirea
+
+9. Changes
+We may update this policy. Changes will be posted on this page with an updated date.
